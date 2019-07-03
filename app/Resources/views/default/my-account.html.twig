@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+    <div class="jumbotron">
+        <h1 class="display-4">Hello, {{ app.user.username }}!</h1>
+        <hr class="my-4">
+        <a class="btn btn-primary btn-lg" href="{{ path('user_index') }}">
+            Users
+        </a>
+        <a class="btn btn-primary btn-lg" href="{{ path('fos_user_security_logout') }}" role="button">
+            {{ 'layout.logout'|trans({}, 'FOSUserBundle') }}
+        </a>
+    </div>
+{% endblock %}
